@@ -1,0 +1,27 @@
+autoinstall:
+  version: 1
+  early-commands:
+  - apt-get update
+  - apt-get upgrade -y
+  identity:
+    hostname: ubuntu-d
+    username: mgmt 
+    password: "$6$ZE4WV3QRJhPUnsNv$BpkTBYjUOxOiWV5sNPYDSitTwxW.3NHLmhRqptzpa8a4KTxGpkvMaSDbyq4PVri9kdpD1t7ldUBgwB6uveObg."
+  storage:
+    layout: name: lvm
+  snaps:
+    - name: obsidian
+      classic: true
+    - name: code
+      classic: true
+  packages:
+    - vim
+  late-commands:
+  - curtin in-target -- apt-get update
+  - curtin in-target -- apt-get upgrade -y
+  - curtin in-target -- ufw enable
+  - curtin in-target -- ufw allow 22/tcp
+  - curtin in-target -- ufw allow 443/tcp
+  - curtin in-target -- ufw insert 1 deny proto icmp
+  - curtin in-target -- ufw insert 1 limit proto icmp
+  - curtin in-target -- ufw limit 22/tcp
