@@ -8,7 +8,8 @@ autoinstall:
     username: mgmt 
     password: "$6$ZE4WV3QRJhPUnsNv$BpkTBYjUOxOiWV5sNPYDSitTwxW.3NHLmhRqptzpa8a4KTxGpkvMaSDbyq4PVri9kdpD1t7ldUBgwB6uveObg."
   storage:
-    layout: name: lvm
+    layout: 
+      name: lvm
   snaps:
     - name: obsidian
       classic: true
