@@ -26,3 +26,7 @@ autoinstall:
   - curtin in-target -- ufw insert 1 deny proto icmp
   - curtin in-target -- ufw insert 1 limit proto icmp
   - curtin in-target -- ufw limit 22/tcp
+  # Set time zone (replace 'America/Chicago' with your desired time zone)
+  - curtin in-target -- timedatectl set-timezone 'America/Chicago'
+  # Install a security scanner (e.g., lynis)
+  - curtin in-target -- apt-get install lynis
