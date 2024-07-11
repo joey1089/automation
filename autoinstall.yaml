@@ -1,3 +1,4 @@
+# This yaml script is used to update Ubuntu and create user then configures storage,firewall, timezone and installs softwares
 autoinstall:
   version: 1
   early-commands:
@@ -32,3 +33,4 @@ autoinstall:
   - curtin in-target -- timedatectl set-timezone 'America/Chicago'
   # Install a security scanner (e.g., lynis)
   - curtin in-target -- apt-get install lynis
+  - curtin in-target -- apt-get install git
