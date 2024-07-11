@@ -6,7 +6,9 @@ autoinstall:
   identity:
     hostname: ubuntu24
     username: mgmt 
+    # user name admin is not allowed, its reserved 
     password: "$6$ZE4WV3QRJhPUnsNv$BpkTBYjUOxOiWV5sNPYDSitTwxW.3NHLmhRqptzpa8a4KTxGpkvMaSDbyq4PVri9kdpD1t7ldUBgwB6uveObg."
+    # changeurpassword
   storage:
     layout: 
       name: lvm
