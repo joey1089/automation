@@ -32,5 +32,5 @@ autoinstall:
   # Set time zone (replace 'America/Chicago' with your desired time zone)
   - curtin in-target -- timedatectl set-timezone 'America/Chicago'
   # Install a security scanner (e.g., lynis)
-  - curtin in-target -- apt-get install lynis
-  - curtin in-target -- apt-get install git
+  - curtin in-target -- apt-get install lynis -y
+  - curtin in-target -- apt-get install git -y
