@@ -1,6 +1,7 @@
+#!/bin/bash
+
 # Use this script as a bootstrap
 # script is used to update ubuntu and create user then configures firewall, timezone and installs softwares
-#!/bin/bash
 
 # Update and upgrade system
 apt-get update
